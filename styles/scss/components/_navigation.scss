@@ -1,0 +1,224 @@
+.navigation{
+    height: max-content;
+    grid-column: full-start / full-end;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+    font-family: 'Righteous', cursive;
+
+    &__top {
+        height: 10vh;
+        background-color: transparent;
+        display: flex;
+        padding: 0 20px;
+        align-items: center;
+        justify-content: space-evenly;
+
+         @include responsive(tab-port) {
+             padding: 2rem;
+             height: unset;
+             justify-content: space-between;
+         }
+
+        .telephone {
+            flex: 20%;
+            color: white;
+            font-size: 1.3rem;
+
+            > * {
+                margin: 0 10px;
+            }
+            @include responsive(tab-port) {
+                display: none;
+            }
+        }
+    }
+
+    &__bottom{
+        height: 10vh;
+        padding: 2rem;
+        background-color: transparent;
+
+        @include responsive(tab-port) {
+            padding: 0;
+            transition: all .5s;
+            display: block;
+            position: fixed;
+            transform: translateX(-100%);
+            z-index: 200;
+            background-color: rgba($color: #000000, $alpha: .7);
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+
+    &__button {
+        display: none;
+        @include responsive(tab-port){
+            width: 6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 6rem;
+            border: 2px solid white;
+            cursor: pointer;
+
+        }
+        
+    }
+
+    &__checkbox{
+        display: none;
+    }
+
+    &__icon{
+        &,
+        &::before,
+        &::after{
+            display: block;
+            width: 4rem;
+            height: 4px;
+            position: relative;
+            background-color: white;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+        }
+
+        &::before {
+            top: -1rem;
+        }
+
+        &::after {
+            top: 1rem;
+        }
+    }
+
+    &__checkbox:checked ~ &__button &__icon {
+        & {
+            background-color: transparent;
+        }
+         &::before,
+         &::after {
+             top: 0;
+             
+         }
+
+         &::before {
+             transform: rotate(45deg);
+         }
+
+         &::after {
+             transform: rotate(-45deg);
+         }
+    }
+
+    
+
+    &__list {
+        display: flex;
+        list-style: none;
+        height: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @include responsive(tab-port) {
+            padding: 2rem 3rem;
+            overflow-y: scroll;
+             background-color: black;
+             width: 30%;
+             flex-direction: column;
+             align-items: flex-start;
+             justify-content: flex-start;
+         }
+
+    }
+
+    &__link{
+
+        &:link,
+        &:visited{
+            text-decoration: none;
+            display: flex;
+            text-transform: uppercase;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+
+            @include responsive(tab-port) {
+                font-size: 2.5rem;
+                margin: 1rem 0;
+            }
+
+            
+        }
+
+        &.active{
+            color: $color-primary-dark;
+
+            &::before {
+                content: '\2726';
+                display: block;
+                color: $color-primary-dark;
+                margin-right: 10px;
+                font-size: 2rem;
+
+                @include responsive(tab-port) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &.active &__bottom {
+        @include responsive(tab-port) {
+            transform: translateX(0);
+        }
+    }
+
+
+}
+
+
+.social-media{
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+        flex: 20%;
+
+        @include responsive(tab-port) {
+            display: none;
+        }
+
+    }
+
+    &__item {
+        text-decoration: none;
+        color: white;
+        list-style: none;
+
+    }
+
+    &__link {
+        &,
+        &:link,
+        &:visited {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        & svg {
+            font-size: 1.7rem;
+            cursor: pointer;
+            margin: 0 2rem;
+            cursor: pointer;
+        }
+       
+    }
+}

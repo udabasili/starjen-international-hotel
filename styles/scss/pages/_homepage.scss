@@ -1,0 +1,61 @@
+.content--homepage {
+    display: grid;
+    grid-template-columns: inherit;
+    grid-column: full-start / full-end;
+
+}
+
+.section-about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15rem 0;
+
+    @include responsive(tab-port) {
+       grid-template-columns: 1fr;
+       grid-template-rows: repeat(2, 1fr);
+
+    }
+
+    &__content {
+        padding: 4rem;
+
+    }
+}
+
+
+.section-rooms{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: max-content;
+
+    @include responsive(tab-port) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+
+    }
+}
+
+.section-review{
+    display: grid;
+    padding: 15rem 0;
+    
+}
+
+.section-gallery{
+    background-color: #f9f7f6;
+    grid-column: full-start / full-end;
+    display: grid;
+    /* grid-template-columns: repeat(8, 1fr); */
+    /* grid-template-rows: repeat(7, 5vw); */
+    grid-template: repeat(7, 5vw)/repeat(8, 1fr);
+    grid-gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+
+.section-service{
+    display: grid;
+    padding: 15rem 0;
+    grid-column: center-start / center-end;
+   
+}

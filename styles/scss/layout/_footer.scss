@@ -1,0 +1,45 @@
+.footer{
+    background-color: black;
+    height: 60vh;
+    width: 100%;
+    grid-column: full-start / full-end;
+    padding: 9rem;
+}
+
+.footer-nav {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+
+    &__link:link,
+    &__link:visited {
+        font-size: 1.4rem;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Righteous', cursive;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1.5rem;
+        display: block;
+        transition: all .2s;
+    }
+
+    &__link:hover,
+    &__link:active {
+        background-color: rgba(#fff, .05);
+        transform: translateY(-3px);
+    }
+}
+
+.copyright {
+    font-size: 1.4rem;
+    color: gray;
+    margin-top: 6rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 70%;
+}

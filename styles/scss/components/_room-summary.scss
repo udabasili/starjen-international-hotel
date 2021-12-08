@@ -1,0 +1,111 @@
+.room-summary{
+    &__image {
+        width: 100%;
+        position: relative;
+        height: 70vh;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    &__image  span {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    &__details {
+        background-color: $color-primary-dark;
+        width: 100%;
+        display: grid;
+        padding: 8rem;
+        padding-top: 6rem;
+
+        .btn {
+            margin-left: 2rem;
+            justify-self: flex-start;
+            align-self: flex-start;
+        }
+
+    }
+
+    &__name {
+        font-size: 2.4rem;
+        cursor: pointer;
+        
+
+    }
+
+    &__info {
+        font-size: 1.3rem;
+        display: none;
+        font-weight: 400;
+
+    }
+}
+
+.room{
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        font-size: 2rem;
+        cursor: pointer;
+        color: rgb(61, 57, 57);
+        font-weight: bold;
+        grid-template-rows: min-content 1fr;
+
+        @include responsive(tab-port) {
+           margin-bottom: 2rem;
+
+        }
+        
+    }
+
+    &__radio-button {
+        width: 2rem;
+        height: 2rem;
+        grid-row: 1 / span 2;
+        align-self: flex-start;
+        border-radius: 50%;
+        margin-right: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    &__radio-input:checked  +  &__radio-label {
+        color: black;
+    }
+
+    &__radio-input:checked  +  &__radio-label &__radio-button::after {
+        content: '\22D1';
+        font-size: 4rem;
+    }
+
+    
+}
+
+.room__radio-input:checked + .room__radio-label .room-summary__info {
+    display: flex;
+    list-style-type: disc;
+}
+.room-summary__info li {
+    list-style: none;
+    font-size: 1.6rem;
+}
+
+.room-summary__info li:last-child {
+    &::before {
+        content: '-';
+        margin: 0 1rem;
+    }
+}

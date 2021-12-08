@@ -1,0 +1,84 @@
+.composition {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    @include responsive(tab-port) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
+
+    &__photo {
+        width: 20rem;
+        height: 20rem;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        outline: 1rem solid $color-primary;
+        transition: all .5s;
+        box-shadow: 0 1.5rem 4rem  rgba($color: #000000, $alpha: .5);
+
+        @include responsive(tab-port) {
+            transform: unset;
+            width: auto;
+            height: auto;
+            position: relative;
+            box-shadow: none;
+            outline: none
+
+        }
+        
+        &.active{
+            outline-offset:  1rem;
+            z-index: 20;
+            transform: scale(1.2) translate(-50%, -50%);
+            ;
+            @include responsive(tab-port) {
+                transform: unset;
+                top: unset !important;
+                left: unset !important;
+                right: unset !important
+            }
+        }
+    }
+
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__photo--p1 {
+        left :35%;
+         top: 10rem;
+
+        @include responsive(tab-port) {
+            left: unset !important;
+            top: unset !important
+        }
+    }
+
+    &__photo--p2 {
+        left: 75%;
+        top: 10rem;
+
+        @include responsive(tab-port) {
+            left: unset !important;
+            top: unset !important
+        }
+    }
+
+    &__photo--p3 {
+        left: 50%;
+        top: 20rem;
+
+        @include responsive(tab-port) {
+            left: unset !important;
+            top: unset !important
+        }
+    }
+}
+

@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-weight: 400;
+    font-size: 62.5%;
+    line-height: 1.2;
+        font-family: 'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+
+
+    @include responsive(tab-port){
+        font-size: 56.25%
+    }
+
+    @include responsive(tab-land){
+        font-size: 50%
+    }
+
+    @include responsive(big-desktop) {
+        font-size: 75%;
+    }
+}
+
+
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    position: relative;
+    min-height: 100vh;
+    grid-template-rows: min-content max-content 1fr;
+}
+
+.content {
+    grid-column: full-start / full-end;
+}
+
+section {
+    grid-column: full-start / full-end;
+}
+
+.col-1-of-2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}

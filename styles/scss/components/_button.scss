@@ -1,0 +1,33 @@
+.btn {
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-family: 'Oswald', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    transition: all .2s;
+    text-decoration: none;
+
+    &:hover {
+        transform: scale(1.09);
+        color: $color-primary;
+    }
+}
+
+.btn--medium {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 3rem;
+        display: inline-block;
+        position: relative;
+        font-size: 1.6rem;
+        border: none;
+        cursor: pointer;
+    }
+}
