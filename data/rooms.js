@@ -13,7 +13,7 @@ export const roomsData = [
              breakfast: true,
              airPortPickupService: '₦4,500/round'
          },
-        image: 'https://res.cloudinary.com/udbasil/image/upload/v1638357998/Starjen%20international/IMG-20211201-WA0029_ijaawb.jpg'
+        image: 'https://res.cloudinary.com/udbasil/image/upload/q_auto:good/v1638357998/Starjen%20international/IMG-20211201-WA0029_ijaawb.jpg'
 
     },
     {
@@ -30,7 +30,7 @@ export const roomsData = [
             airPortPickupService: '₦4,500/round'
         },
         cost: '₦8,800.00',
-        image: 'https://res.cloudinary.com/udbasil/image/upload/v1638357999/Starjen%20international/IMG-20211201-WA0030_kisr2v.jpg'
+        image: 'https://res.cloudinary.com/udbasil/image/upload/q_auto:good/v1638357999/Starjen%20international/IMG-20211201-WA0030_kisr2v.jpg'
 
 
     },
@@ -43,7 +43,7 @@ export const roomsData = [
          breakfast: false,
          description: 'Spacious, bright and outward facing rooms measuring 19 m2 and totally refurbished. The room comes with comfortable bed (manufactured and designed exclusively for Starjen International Hotels), a modern, fully equipped bathroom with proper ventilation. It also has a home automation system which automatically regulates the temperature of the room based on guest presence or absence from the room.',
          cost: '₦7,150.00',
-         image: 'https://res.cloudinary.com/udbasil/image/upload/v1638358003/Starjen%20international/IMG-20211201-WA0002_a7ftox.jpg',
+         image: 'https://res.cloudinary.com/udbasil/image/upload/q_auto:good/v1638358003/Starjen%20international/IMG-20211201-WA0002_a7ftox.jpg',
          amenities: {
              wifi: true,
              roomService: true,
@@ -58,7 +58,7 @@ export const roomsData = [
          description: 'Short Lease rental is a promotion from us to our esteemed guests who would want to extend their state for extra days',
          maxPeople: 2,
          size: 'Standard',
-         image: 'https://res.cloudinary.com/udbasil/image/upload/v1638643507/Starjen%20international/short-lease-400x300_lqnrzq.jpg',
+         image: 'https://res.cloudinary.com/udbasil/image/upload/q_auto:good/v1638643507/Starjen%20international/short-lease-400x300_lqnrzq.jpg',
          amenities: {
              wifi: false,
              roomService: false,

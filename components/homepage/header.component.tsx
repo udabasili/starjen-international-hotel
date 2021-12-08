@@ -10,7 +10,9 @@ export default function Header() {
             <Image 
                 cloudName={CLOUDNAME}
                 publicId="v1638357999/Starjen%20international/IMG-20211201-WA0032_vwurye.jpg" 
-                width="100%" 
+                width="auto" 
+                responsive
+                crop="scale"
                 className="header__image"
                 />
             <div className='header__background'/>

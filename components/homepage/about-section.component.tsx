@@ -60,6 +60,7 @@ const AboutSection: FunctionComponent<{initial?: number}> = ({ initial = 0 }) =>
                 {
                     images.map((image, index) => (
                         <div 
+                            key={index}
                             className={`
                                 composition__photo composition__photo--p${index + 1}
                                 ${currentSlide === index ? 
@@ -70,7 +71,9 @@ const AboutSection: FunctionComponent<{initial?: number}> = ({ initial = 0 }) =>
                                  <Image 
                                     cloudName={CLOUDNAME}
                                     publicId={image} 
-                                    width="100%" 
+                                    width="auto" 
+                                    responsive
+                                    crop="scale"
                                     className="composition__image"
                                 />
                             <div className="composition__background"/>

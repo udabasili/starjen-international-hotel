@@ -25,7 +25,7 @@ export default function ServiceSection() {
                     loop
                     className='service__video'>
                     <source 
-                        src="https://res.cloudinary.com/udbasil/video/upload/v1638478535/Starjen%20international/Video/YouCut_20211202_215441490_ia93ss.mp4" type="video/mp4"/>
+                        src="https://res.cloudinary.com/udbasil/video/upload/q_auto:good/v1638478535/Starjen%20international/Video/YouCut_20211202_215441490_ia93ss.mp4" type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video> 
                 <video 
@@ -35,7 +35,7 @@ export default function ServiceSection() {
                     loop
                     autoPlay 
                     className='service__video'>
-                    <source src="https://res.cloudinary.com/udbasil/video/upload/v1638478711/Starjen%20international/Video/YouCut_20211202_215727254_mji0dx.mp4" type="video/mp4"/>
+                    <source src="https://res.cloudinary.com/udbasil/video/upload/q_auto:good/v1638478711/Starjen%20international/Video/YouCut_20211202_215727254_mji0dx.mp4" type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video> 
                 <div className='service__description'>
@@ -61,7 +61,7 @@ export default function ServiceSection() {
                     loop
                     autoPlay 
                     className='service__video'>
-                    <source src="https://res.cloudinary.com/udbasil/video/upload/v1638478350/Starjen%20international/Video/YouCut_20211202_214941657_kemchg.mp4" type="video/mp4"/>
+                    <source src="https://res.cloudinary.com/udbasil/video/upload/q_auto:good/v1638478350/Starjen%20international/Video/YouCut_20211202_214941657_kemchg.mp4" type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video> 
             </div>
