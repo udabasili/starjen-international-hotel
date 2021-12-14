@@ -11,6 +11,7 @@
     &__image {
         height: 100%;
         object-fit: cover;
+        width: 100%;
         position: absolute;
         z-index: -1;
     }
@@ -35,6 +36,11 @@
         height: 80vh;
         position: absolute;
         top: 20vh;
+
+         @include responsive(tab-port) {
+             padding: 1rem;
+
+         }
 
     .header-3 {
         padding: 1.5rem 0;

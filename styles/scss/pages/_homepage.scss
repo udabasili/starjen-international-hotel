@@ -57,5 +57,12 @@
     display: grid;
     padding: 15rem 0;
     grid-column: center-start / center-end;
+
+     @include responsive(mobile) {
+         grid-column: full-start / full-end;
+         padding: 1rem;
+
+
+     }
    
 }

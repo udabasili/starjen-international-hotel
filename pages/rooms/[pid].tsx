@@ -35,6 +35,21 @@ interface RoomsDetailsState  {
   data: RoomProps
 }
 
+export async function getServerSideProps({ query }) {
+  if (!query.pid) {
+    return {
+      redirect: {
+          destination: '/rooms',
+          permanent: false
+      }
+    };
+  }
+
+  return {
+    props: {},
+  };
+}
+
 
 class RoomsDetails extends Component<RoomsDetailsProp, RoomsDetailsState> {
     pid: string | string[]
@@ -47,23 +62,29 @@ class RoomsDetails extends Component<RoomsDetailsProp, RoomsDetailsState> {
     }
     
     componentDidMount(): void {
-        const { router } = this.props
-        const { pid } = router.query
-        console.log(pid)
-        const data = roomsData.find(room => room.id === pid)
-        console.log(data)
-        if ( data === undefined){
-            router.push('/rooms')
+        const trigger = document.querySelector(".trigger");
+        const modal = document.querySelector(".modal");
+        function toggleModal() {
+          if (modal.classList.contains('show')){
+              modal.classList.remove("show");
+          } else {
+            modal.classList.add("show");
+
+          }
         }
-        this.setState({
-            data
-        })
+
+        trigger.addEventListener("click", toggleModal);
+
     }
 
+    
+    
 
     render() {
         
-        const data = this.state.data
+        const { router } = this.props
+        const { pid } = router.query
+        const data = roomsData.find(room => room.id === pid)
 
         return (
             <>
@@ -75,11 +96,6 @@ class RoomsDetails extends Component<RoomsDetailsProp, RoomsDetailsState> {
                     <meta name="author" content="Starjen International Hotel"></meta>
                     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Righteous&display=swap" rel="stylesheet"/>       
                 </Head> 
-                {
-                    Object.keys(data).length === 0 ? 
-                    <>
-                    </> :
-                    <>
                       <CustomSectionHeader 
                             title={data.name}
                             pathname='rooms'
@@ -164,10 +180,6 @@ class RoomsDetails extends Component<RoomsDetailsProp, RoomsDetailsState> {
                             </aside>
                         </section>
                     </>
-
-                }
-              
-            </>
         )
     }
 }

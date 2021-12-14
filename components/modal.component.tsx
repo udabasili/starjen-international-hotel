@@ -12,16 +12,16 @@ export const Modal:FunctionComponent = () => {
                     Contact Us
                 </div>
                 <div className="modal__body">
-                    <ul className="contact__list">
-                        <li className="contact__item">
+                    <ul className="modal-contact__list">
+                        <li className="modal-contact__item">
                              <BsFillTelephoneFill/>
                             <span>0702-6292-882</span>
                         </li>
-                        <li className="contact__item">
+                        <li className="modal-contact__item">
                             <BsFillTelephoneFill/>
                             <span>0802-2711-960</span>
                         </li>
-                        <li className="contact__item">
+                        <li className="modal-contact__item">
                             <BsWhatsapp/>
                             <a 
                                 target="_blank"

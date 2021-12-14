@@ -16,6 +16,11 @@
         background-color: white;
         display: grid;
         grid-template-rows: max-content 1fr max-content;
+        
+        @include responsive(tab-port) {
+             width: 100%;
+
+        }
 
     }
 
@@ -50,7 +55,7 @@
     }
 }
 
-.contact {
+.modal-contact {
     &__list {
         display: flex;
         padding: 4rem 8rem 0 8rem;

@@ -8,6 +8,8 @@
 
     @include responsive(tab-port) {
         grid-template-columns: 1fr;
+        padding: 1rem;
+        grid-column: full-start / full-end;
     }
 
 
@@ -15,7 +17,12 @@
         justify-self: center;
         grid-column: 1 / -1;
         object-fit: none;
-        width: 100%;
+        width: 80%;
+
+         @include responsive(tab-port) {
+             margin: 1rem;
+         }
+        
     }
 
     .paragraph {

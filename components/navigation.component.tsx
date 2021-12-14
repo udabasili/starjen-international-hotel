@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from 'react'
+import React, {ChangeEvent, useEffect} from 'react'
 import Link from 'next/link';
 import { 
     AiFillFacebook, 
@@ -14,6 +14,16 @@ import { useRouter } from 'next/router';
 export default function Navigation() {
 
     const router = useRouter()
+
+    useEffect(() => {
+         router.events.on('routeChangeComplete', (url) => {
+            const navCheckbox = document.querySelector('.navigation__checkbox') as HTMLInputElement
+            const nav = document.querySelector('.navigation') as HTMLInputElement
+            navCheckbox.checked = false
+            nav.classList.remove('active')
+        });
+    }, [])
+
     const toggleNav = (e: ChangeEvent<HTMLInputElement>) => {
         const nav = document.querySelector('.navigation')
         if (e.target.checked) {

@@ -48,7 +48,11 @@
         padding-top: 6rem;
 
         @include responsive(tab-port) {
-            padding: 2rem;
+            padding: 3rem;
+        }
+
+        @include responsive(mobile) {
+            padding: 1rem;
         }
     }
 }

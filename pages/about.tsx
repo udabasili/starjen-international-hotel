@@ -34,7 +34,8 @@ export default class About extends Component {
                         <Image
                             src="https://res.cloudinary.com/udbasil/image/upload/v1638358001/Starjen%20international/IMG-20211201-WA0016_avlxel.jpg"
                             alt="about-1"
-                              layout='fill'
+                            layout='fill'
+                             data-aos="fade-right"
                             objectFit='cover'
                         />
                     </div>
@@ -50,6 +51,7 @@ export default class About extends Component {
                         <Image
                             src="https://res.cloudinary.com/udbasil/image/upload/v1638968362/Starjen%20international/7-400x300_heco1w.jpg"
                             alt="about-1"
+                             data-aos="fade-right"
                             layout='fill'
                             objectFit='cover'
                         />
@@ -68,6 +70,7 @@ export default class About extends Component {
                             alt="about-1"
                             layout='fill'
                             objectFit='cover'
+                             data-aos="fade-right"
                         />
                     </div>
                     <div className="col-2-of-2">
@@ -84,6 +87,7 @@ export default class About extends Component {
                             alt="about-1"
                             layout='fill'
                             objectFit='cover'
+                             data-aos="fade-right"
                         />
                     </div>                                                                                             
                     <div className="col-2-of-2">

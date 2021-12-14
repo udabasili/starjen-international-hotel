@@ -37,6 +37,7 @@ const RoomSection: FunctionComponent<{currentImageIndex?: number}> = (
                             type='radio' 
                             className="room__radio-input"  
                             name='room' 
+                            key={room.id}
                             value={index}
                             onChange={onChangeVale}
                             checked={index === currentImage}
